@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Contenedor padre con display flex y space-between */
+        .contenedor-padre {
+            display: flex;
+            justify-content: space-between;
+            /* Separación entre los dos elementos principales */
+        }
+
+        /* Elemento 2 con los subelementos, también usando flex */
+        .elemento-2 {
+            display: flex;
+            justify-content: space-between;
+            /* Para separar los 4 subelementos */
+            width: 100%;
+            /* Asegúrate de definir un ancho si quieres que se expandan */
+            gap: 10px;
+            /* Opcional: espacio entre los subelementos */
+        }
+
+        /* Estilos para los subelementos (puedes personalizarlos) */
+        .subelemento {
+            background-color: lightgray;
+            padding: 10px;
+            flex-grow: 1;
+            /* Hace que cada subelemento ocupe espacio proporcional */
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Contenedor padre -->
+    <div class="contenedor-padre">
+        <!-- Primer elemento (puede ser lo que quieras) -->
+        <div class="elemento-1">
+            <!-- Contenido -->
+            <img src="./images/logo.jpg" alt="">
+        </div>
+
+        <!-- Segundo elemento que contiene los 4 subelementos -->
+        <div class="elemento-2">
+            <div class="subelemento">Subelemento 1</div>
+            <div class="subelemento">Subelemento 2</div>
+            <div class="subelemento">Subelemento 3</div>
+            <div class="subelemento">Subelemento 4</div>
+        </div>
+    </div>
+
+</body>
+
+</html>
