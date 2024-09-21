@@ -125,7 +125,8 @@ nav ul {
     padding: 0 20vw;
 }
 
-#services>h1 {
+#services>h1,
+#about-us>h1 {
     text-align: center;
     margin: 3vh 0;
     text-decoration: underline;
@@ -140,8 +141,10 @@ nav ul {
 }
 
 .services article h1 {
-    display: inline-block;
+    align-self: self-start;
     border: 1px solid var(--secondary-color);
+    aspect-ratio: 1 / 1;
+    text-align: center;
     padding: 1vh;
     font-size: 1.5em;
 }
@@ -180,4 +183,21 @@ footer p {
 #about-us .read-more {
     color: white;
     background-color: var(--secondary-color);
+}
+
+#about-us {
+    padding: 0 20vw;
+}
+
+.about-us {
+    display: flex;
+    gap: 2vw;
+}
+
+.about-us>img {
+    border: 1px solid var(--secondary-color);
+}
+
+.about-us>* {
+    flex: 1;
 }
