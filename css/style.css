@@ -7,6 +7,12 @@
     font-style: normal;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
 header {
     padding: 2vh 20vw;
 }
@@ -43,13 +49,17 @@ nav ul {
     display: none;
 }
 
+.home {
+    color: var(--secondary-color);
+}
+
 .user-related-and-contacts nav ul {
     display: flex;
     justify-content: space-between;
 }
 
 .user-related-and-contacts nav ul li {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .user-related-and-contacts nav ul li a {
@@ -83,7 +93,7 @@ nav ul {
     display: flex;
     background-color: rgba(0, 0, 0, 0.5);
     flex-direction: column;
-    padding: 25vh 20vw;
+    padding: 20vh 20vw;
     gap: 10px;
     align-items: flex-start;
 }
@@ -94,9 +104,9 @@ nav ul {
     background-color: var(--secondary-color);
 }
 
-#hero-section nav {
+.social-icons {
     display: flex;
-    gap: 1vw;
+    gap: 1.4vw;
 }
 
 #hero-section nav i {
@@ -121,15 +131,32 @@ nav ul {
     color: var(--secondary-color);
 }
 
-#services {
+#services,
+#about-us {
     padding: 0 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #services>h1,
 #about-us>h1 {
+    position: relative;
     text-align: center;
-    margin: 3vh 0;
-    text-decoration: underline;
+    padding: 1vh 0;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+#services>h1::before,
+#about-us>h1::before {
+    content: "X";
+    position: absolute;
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 0.8em;
+    transform: translate(-50%, 50%);
+    top: 50%;
+    left: 50%;
 }
 
 .services article {
@@ -190,8 +217,10 @@ footer p {
 }
 
 .about-us {
+    margin: 4vh;
     display: flex;
     gap: 2vw;
+    margin-bottom: 20vh;
 }
 
 .about-us>img {
@@ -200,4 +229,31 @@ footer p {
 
 .about-us>* {
     flex: 1;
+}
+
+.history {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.history h2,
+.history h1 {
+    font-size: 1em;
+}
+
+.history h2 {
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.history h1 {
+    font-weight: bold;
+    font-weight: 800;
+}
+
+.history a {
+    align-self: self-start;
+    padding: 15px;
+    font-weight: 500;
 }
